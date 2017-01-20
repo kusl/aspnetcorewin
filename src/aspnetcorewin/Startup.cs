@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AspnetCoreWin.Models;
 
 namespace AspnetCoreWin
 {
@@ -29,7 +30,7 @@ namespace AspnetCoreWin
         {
             // Add framework services.
             services.AddMvc();
-            services.AddSingleton<AspnetCoreWin.Models.ITodoRepository, AspnetCoreWin.Models.ITodoRepository>();
+            services.AddSingleton<ITodoRepository, TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

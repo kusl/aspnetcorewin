@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspnetCoreWin.Models
 {
-    public class TodoRepository
+    public class TodoRepository : ITodoRepository
     {
         private static ConcurrentDictionary<string, TodoItem> _todos = new ConcurrentDictionary<string, TodoItem>();
 
